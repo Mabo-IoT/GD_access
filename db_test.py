@@ -10,7 +10,7 @@ class DB:
     def connect(self):
         conn_str = (
            r'DRIVER={Microsoft Access Driver (*.mdb, *.accdb)};'
-           r'DBQ=D:\Work\Projects\GD_access\PTDB1.accdb;'
+           r'DBQ=D:\mabo-yummy\GD_access\PTDB1.accdb;'
         )
         cnxn = pyodbc.connect(conn_str)
         crsr = cnxn.cursor()
