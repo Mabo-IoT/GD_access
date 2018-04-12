@@ -1,7 +1,7 @@
 import pyodbc
 
 
-class DB:
+class DB():
     # 程序最先初始化，遍历报警信息表
     # 只抓取最新一条信息进行判断
     def __init__(self):
@@ -27,7 +27,7 @@ class DB:
         # 初始化后，进行抓取最后一条数据循环
         self.init()
         while 1:
-            print('running')
+            # print('running') #TODO 测试无限循环
             self.catchFinall()
 
 
@@ -43,7 +43,7 @@ class DB:
                 self.warning()
             else:
                 print('NO WARNING')
-        # 如果想一直刷新warning信息，则取消下面4行注释并注释上面4行。！！！下面4行仅作为测试使用
+        # TODO 如果想一直刷新warning信息，则取消下面4行注释并注释上面4行。！！！下面4行仅作为测试使用
         # if not self.warning_list == []:
         #     self.warning()
         # else:
