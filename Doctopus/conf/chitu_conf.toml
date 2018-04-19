@@ -1,0 +1,45 @@
+node = 'test'
+local_ip = "10.0.0.1"
+application = "chitu"
+paths = ['./conf/conf.toml']
+
+send_to_where = 'influxdb'
+
+[redis]
+    [[redis.address]]
+    # local ip or remote ip ?
+    host = "127.0.0.1"
+    # which port is your redis server host?
+    port = 6379
+    # which db your data reside in ?
+    db = 1
+
+[influxdb]
+    host = "10.203.96.26"
+    port = 8086
+    username ="eimuserw"
+    password = "max2016s0luto9"
+    db = "patac_eim"
+
+[etcd]
+    host = 'localhost'
+    port = 2379
+
+    # register status data to etcd server interval time (s)
+    interval = 600
+
+[web]
+    set_name = 'status'
+    order_status = 'get_status'
+
+[log_configuration]
+    console = true
+    console_level = 'DEBUG'   #'DEBUG','INFO','WARNING','ERROR','CRITICAL'
+    file = true
+    file_level = 'DEBUG'  #'DEBUG','INFO','WARNING','ERROR','CRITICAL'
+    remote = true
+    remote_level = 'ERROR'  #'DEBUG','INFO','WARNING','ERROR','CRITICAL'
+    log_file = 'logs/log.log'
+    backup_count = 5
+    max_size = 10240
+    format_string = '(%(asctime)s), %(levelname)s, <%(threadName)s>, %(module)s, %(funcName)s, [%(lineno)d]: %(message)s'
