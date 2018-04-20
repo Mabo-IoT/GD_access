@@ -1,0 +1,1 @@
+## You should install 32-bit driver if you run 32-bit python. Or install 64-bit driver if you run 64-bit python

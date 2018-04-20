@@ -6,12 +6,13 @@ paths = ['./conf/conf.toml', './lua/enque_script.lua', './plugins/your_plugin.py
 [user_conf]
     [user_conf.check]
     # check config
-    r'DRIVER={Microsoft Access Driver (*.mdb, *.accdb)};'
-    r'DBQ=D:\mabo-yummy/GD_access/PTDB1.accdb;'
+    DRIVER='{Microsoft Access Driver (*.mdb, *.accdb)}'
+    DBQ='D:\Work\Projects\GD_access_project\GD_access\PTDB1.accdb;'
+    table_names = ['报警资料', '测试数据', '日志信息']
 
     [user_conf.handler]
     # handler config
-    table_name = 'GD_access_warning'
+    table_name = 'GD_access'
     # table_name = '报警资料'
     # field_name_list = ['Msg']
     # 's' or 'u'
